@@ -1,21 +1,21 @@
 #include "main.h"
 /**
-
- * @list: o arguments to print
  * handle_print - prints argument based on its type
+ * @list: List of arguments to be printed.
  * @fmt: formatted string.
  * @buffer: to handle print
  * @ind: i
  * @flags: what are the active flags
-* @precision: how precise
+ * @precision: how precise
  * @width: whats the width.
  * @size: whats the size
  * Return: 1 or 2 on success;
  */
-int handle_print(const char *fmt, int size, int *ind, va_list list, char buffer[],
-	int flags, int precision, int width)
+int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
+	int flags, int width, int precision, int size)
 {
 	int i, x = 0, y = -1;
+
 	fmt_t fmt_types[] = {
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
 		{'i', print_int}, {'d', print_int}, {'b', print_binary},
