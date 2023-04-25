@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * size_of - determines arguments to be cast
+ * get_size - determines amount of arguments to be cast
  * @format: formatted string where arguments will be printed
- * @i: Arguments list
+ * @i: Arguments list that will be printed.
  *
  * Return: On success the function returns the size.
  */
-int size_of(const char *format, int *i)
+int get_size(const char *format, int *i)
 {
 	int curr_i = *i + 1;
 	int size = 0;
